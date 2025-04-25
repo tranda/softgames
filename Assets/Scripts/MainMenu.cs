@@ -17,9 +17,10 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    public void ClickAceOfShadows()
+    public void ClickedAceOfShadows()
     {
-        Debug.Log("Ace of Shadows clicked!");
         SceneManager.LoadScene("Ace of Shadows");
     }
+
+
 }

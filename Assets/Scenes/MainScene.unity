@@ -1378,7 +1378,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1771499538}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ClickAceOfShadows
+        m_MethodName: ClickedAceOfShadows
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
