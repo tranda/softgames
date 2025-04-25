@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ace of Shadows.unity
     guid: 961f72e3bfdee5b4da43354d8e4ec9c8
+  - enabled: 1
+    path: Assets/Scenes/Magic Words.unity
+    guid: 0b57f79a1ce447f41b8a1f5147538747
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

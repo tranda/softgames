@@ -11,4 +11,14 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Ace of Shadows");
     }
 
+    public void ClickedMagicWords()
+    {
+        SceneManager.LoadScene("Magic Words");
+    }
+
+    public void ClickedPhoenixFlame()
+    {
+        SceneManager.LoadScene("Phoneix Flame");
+    }
+
 }
