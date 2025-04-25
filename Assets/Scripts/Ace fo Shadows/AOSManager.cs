@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AOSManager : MonoBehaviour
 {
+    [SerializeField] private AOSMenu aOSMenu;
     [SerializeField] private Transform deck1;
     [SerializeField] private Transform deck2;
     [SerializeField] private Card cardPrefab;
@@ -15,14 +17,36 @@ public class AOSManager : MonoBehaviour
 
     private Vector3 cardOffset = new Vector3(0.02f, 0.02f, -0.01f);
     private float flipInterval = 01f;
-    private float flipDuration = 01f;
-    private bool isFlipping = false;
+    private float flipDuration = 02f;
     private Vector3 cardUpOffset = new Vector3(0f, 2f, -4f);
 
     void Start()
     {
+        subscribeToUIEvents();
         Init();
         StartFlippingCards();
+    }
+
+    private void OnDestroy()
+    {
+        unsubscribeToUIEvents();
+    }
+
+    private void subscribeToUIEvents()
+    {
+        aOSMenu.OnResetClicked += ResetDeck;
+        aOSMenu.OnBackClicked += GoBackToMainMenu;
+    }
+
+    private void unsubscribeToUIEvents()
+    {
+        aOSMenu.OnResetClicked -= ResetDeck;
+        aOSMenu.OnBackClicked -= GoBackToMainMenu;
+    }
+
+    private void GoBackToMainMenu()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 
     void Init()
@@ -44,15 +68,12 @@ public class AOSManager : MonoBehaviour
 
     void StartFlippingCards()
     {
-        if (isFlipping) return;
-
         StopAllCoroutines();
         StartCoroutine(flippingCards());
     }
 
     IEnumerator flippingCards()
     {
-        isFlipping = true;
         cards.Reverse();
         var offset = Vector3.zero;
         foreach (var card in cards)
@@ -96,7 +117,6 @@ public class AOSManager : MonoBehaviour
     public void ResetDeck()
     {
         StopAllCoroutines();
-        isFlipping = false;
 
         cards.Reverse();
         var offset = Vector3.zero;

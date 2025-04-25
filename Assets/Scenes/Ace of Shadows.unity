@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6dbedaa8303e64cb1952ad2ee89578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aOSMenu: {fileID: 1222896977}
   deck1: {fileID: 92033001}
   deck2: {fileID: 1797127845}
   cardPrefab: {fileID: 1846803554686907663, guid: 7f602d93b84339c4aaef56a08192558f, type: 3}
@@ -907,7 +908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c4a10833a9881488eaf5cfea95ede2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aOSManager: {fileID: 1111629619}
 --- !u!4 &1222896978
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,8 +1273,8 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1222896978}
   - {fileID: 1111629620}
+  - {fileID: 1222896978}
   - {fileID: 867357963}
   - {fileID: 854995989}
   - {fileID: 1663797625}

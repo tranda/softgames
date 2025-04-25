@@ -1,20 +1,23 @@
+using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+// using UnityEngine.SceneManagement;
 
 public class AOSMenu : MonoBehaviour
 {
-    [SerializeField] private AOSManager aOSManager;
-
+    public Action OnResetClicked;
+    public Action OnBackClicked;
 
 
     public void ClickedBack()
     {
-        SceneManager.LoadScene("MainScene");
+        // SceneManager.LoadScene("MainScene");
+        OnBackClicked?.Invoke();
     }
 
 
     public void ClickedReset()
     {
-        aOSManager.ResetDeck();
+        // aOSManager.ResetDeck();
+        OnResetClicked?.Invoke();
     }
 }
