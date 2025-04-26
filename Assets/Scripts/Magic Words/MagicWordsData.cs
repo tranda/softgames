@@ -22,6 +22,8 @@ public class emojie
 {
     public string name;
     public string url;
+    
+    public Sprite sprite;
 }
 
 [Serializable]

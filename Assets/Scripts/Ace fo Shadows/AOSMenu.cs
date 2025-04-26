@@ -10,14 +10,12 @@ public class AOSMenu : MonoBehaviour
 
     public void ClickedBack()
     {
-        // SceneManager.LoadScene("MainScene");
         OnBackClicked?.Invoke();
     }
 
 
     public void ClickedReset()
     {
-        // aOSManager.ResetDeck();
         OnResetClicked?.Invoke();
     }
 }

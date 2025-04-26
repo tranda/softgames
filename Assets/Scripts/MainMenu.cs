@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void ClickedPhoenixFlame()
     {
-        SceneManager.LoadScene("Phoneix Flame");
+        SceneManager.LoadScene("Phoenix Flame");
     }
 
 }
