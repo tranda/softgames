@@ -716,6 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfMenu: {fileID: 1222896979}
+  fireAnimator: {fileID: 1230966845}
 --- !u!1 &1216530338
 GameObject:
   m_ObjectHideFlags: 0
