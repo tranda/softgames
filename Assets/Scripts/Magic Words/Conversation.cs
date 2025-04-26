@@ -55,19 +55,19 @@ public class Conversation : MonoBehaviour
         {
             if (avatar.position == "left")
             {
-                messageFullLeft.gameObject.SetActive(true);
-                messageFullRight.gameObject.SetActive(false);
                 messageFullLeft.SetName(name);
                 messageFullLeft.SetText(text);
                 messageFullLeft.SetAvatar(avatar.sprite);
+                messageFullLeft.ShowMessage();
+                messageFullRight.HideMessage();
             }
             else if (avatar.position == "right")
             {
-                messageFullRight.gameObject.SetActive(true);
-                messageFullLeft.gameObject.SetActive(false);
                 messageFullRight.SetName(name);
                 messageFullRight.SetText(text);
                 messageFullRight.SetAvatar(avatar.sprite);
+                messageFullRight.ShowMessage();
+                messageFullLeft.HideMessage();
             }
         }
 
