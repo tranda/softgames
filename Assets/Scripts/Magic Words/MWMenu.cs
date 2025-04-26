@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class MWMenu : MonoBehaviour
 {
+    public Action OnNextClicked;
     public Action OnResetClicked;
     public Action OnBackClicked;
 
 
     public void ClickedBack()
     {
-        // SceneManager.LoadScene("MainScene");
         OnBackClicked?.Invoke();
     }
 
+    public void ClickedNext()
+    {
+        OnNextClicked?.Invoke();
+    }
 
     public void ClickedReset()
     {
-        // aOSManager.ResetDeck();
         OnResetClicked?.Invoke();
     }
 }

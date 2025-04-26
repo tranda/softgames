@@ -30,4 +30,6 @@ public class avatar
     public string name;
     public string url;
     public string position;
+
+    public Sprite sprite;
 }
