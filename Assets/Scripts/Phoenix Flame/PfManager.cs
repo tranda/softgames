@@ -4,12 +4,14 @@ using UnityEngine.SceneManagement;
 public class PfManager : MonoBehaviour
 {
     [SerializeField] private PFMenu pfMenu;
-
+    [SerializeField] private Animator fireAnimator;
+    private bool isFireOn = false;
 
 
     void Start()
     {
         subscribeToUIEvents();
+        ToggleFire();
     }
 
     private void OnDestroy()
@@ -36,7 +38,7 @@ public class PfManager : MonoBehaviour
 
     private void ToggleFire()
     {
-        // Implement the logic to toggle the fire effect on or off
-        Debug.Log("Fire effect toggled.");
+        isFireOn = !isFireOn;
+        fireAnimator.SetBool("active", isFireOn);
     }
 }
